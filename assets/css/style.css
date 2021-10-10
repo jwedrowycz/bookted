@@ -12,4 +12,5 @@
 body {
 	font-family: "Comfortaa", serif;
     @apply bg-purple-100;
+    overflow: scroll;
 }
