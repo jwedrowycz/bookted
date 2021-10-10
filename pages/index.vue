@@ -1,8 +1,23 @@
 <template>
 	<div>
-        <h3 class="text-2xl my-5">
-            Ostatnio dodane
-        </h3>
+		<div class="w-full bg-white">
+			<h3 class="text-2xl my-5 p-3">
+				Kategorie literatury
+			</h3>
+		</div>
+		<div class="flex flex-wrap gap-5 lg:m-0">
+			<Button primaryOutline width="w-none">Kryminał</Button>
+			<Button primaryOutline width="w-none">Thriller</Button>
+			<Button primaryOutline width="w-none">Popularnonaukowa</Button>
+			<Button primaryOutline width="w-none">Obyczajowa</Button>
+			<Button primaryOutline width="w-none">Kryminał</Button>
+			<Button primaryOutline width="w-none">Piękna</Button>
+		</div>
+		<div class="w-full bg-white">
+			<h3 class="text-2xl my-5 p-3">
+				Ostatnio dodane
+			</h3>
+		</div>
 		<div class="flex flex-wrap gap-10 justify-between lg:m-0">
 			<Book v-for="book in books" :key="book.id" :book="book" />
 		</div>

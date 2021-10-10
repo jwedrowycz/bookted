@@ -3,7 +3,7 @@
         <div class="container mx-auto">
             <div class="grid grid-cols-4 lg:grid-cols-6">
                 <div class="flex col-span-2 lg:col-start-1 lg:col-span-2 align-middle text-center  ml-2">
-                    <h2 class="text-2xl" id="logo">
+                    <h2 class="text-2xl mr-10" id="logo">
                         <NuxtLink to="/">Bookted</NuxtLink>
                     </h2>
                 </div>
@@ -11,10 +11,13 @@
                     <div class="lg:flex hidden content-end">
                         <ul class="list-none lg:flex">
                             <li>
-                                <a href="#" class="ml-10 hover:text-gray-400 transition">Zaloguj</a>
+                                <button @click="showModal = true" class="ml-10 hover:text-gray-400 transition">Zaloguj</button>
+                                <modal v-if="showModal" @closeModal="showModal = false" >
+                                    <LoginForm @closeModal="showModal = false" />
+                                </modal>
                             </li>
                             <li>
-                                <a href="" class="ml-10 hover:text-gray-400 transition">Zarejestruj</a>
+                                <NuxtLink :to="{name: 'auth-register'}" class="ml-10 hover:text-gray-400 transition">Zarejestruj</NuxtLink>
                             </li>
                         </ul>
                     </div>
@@ -47,6 +50,7 @@ export default {
     data() {
         return {
             isHidden: true,
+            showModal: false,
         }
     },
 	mounted() {
@@ -58,7 +62,7 @@ export default {
     methods: {
         toggleNavbar() {
             this.isHidden = !this.isHidden;
-        }
+        },
     }
 }
 </script>
