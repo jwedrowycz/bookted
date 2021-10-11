@@ -3,7 +3,7 @@
         <div class="flex-none w-full lg:relative lg:w-48">
             <img :src="book.book_image" alt="" class="lg:absolute inset-0 w-full h-full sm:h-96 lg:h-full object-cover" />
         </div>
-        <form class="flex-auto p-6 flex flex-col">
+        <div class="flex-auto p-6 flex flex-col">
             <div class="flex flex-wrap">
             <h1 class="flex-auto text-xl font-semibold">
                 <NuxtLink :to="{ name: 'books-id', params: { 'id': 3 }}" class="hover:text-purple-800 transition-all">
@@ -36,7 +36,7 @@
                     dzisiaj 20:23
                 </p>
             </div>
-        </form>
+        </div>
 </div>
 </template>
 

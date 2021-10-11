@@ -1,5 +1,5 @@
 <template>
-    <button class="btn border border-white capitalize" @click="changeMode">
+    <button class=" capitalize" @click="changeMode">
     {{ btnLabel }}
     </button>
 </template>

@@ -6,7 +6,7 @@
 			</h3>
 		</div>
 		<div class="flex flex-wrap gap-5 lg:m-0">
-			<Button primaryOutline width="w-none">Kryminał<NumberSpan margin="ml-2">120</NumberSpan></Button>
+			<ButtonLink :url="{ name: 'books-category', params: { 'id': 3 }, query: {'category': 'Kryminał'}}" primaryOutline width="w-none">Kryminał<NumberSpan margin="ml-2">120</NumberSpan></ButtonLink>
 			<Button primaryOutline width="w-none">Thriller<NumberSpan margin="ml-2">83</NumberSpan></Button>
 			<Button primaryOutline width="w-none">Popularnonaukowa<NumberSpan margin="ml-2">23</NumberSpan></Button>
 			<Button primaryOutline width="w-none">Obyczajowa<NumberSpan margin="ml-2">233</NumberSpan></Button>
@@ -19,7 +19,14 @@
 			</h3>
 		</div>
 		<div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-5 lg:m-0 ">
-			<Book v-for="book in books" :key="book.id" :book="book" />
+			<template v-if="isLoading">
+				<div class="col-span-3">
+					<Loading />
+				</div>
+			</template>
+			<template v-else>
+				<Book v-for="book in books" :key="book.id" :book="book" />
+			</template>
 		</div>
     </div>
 </template>
@@ -29,7 +36,8 @@ import axios from 'axios';
 export default {
 	data() {
 		return {
-			books: {}
+			books: {},
+			isLoading: false,
 		}
 	},
 	mounted() {
@@ -37,9 +45,11 @@ export default {
 	},
 	methods: {
 		loadData() {
+			this.isLoading = !this.isLoading;
 			axios.get('https://api.nytimes.com/svc/books/v3/lists/current/hardcover-fiction.json?api-key=sbXX8wsCr5lHgDZ0fGSfNx9IA9BTRvkk')
 			.then(response => {
 				this.books = response.data.results.books;
+				this.isLoading = false;
 			}).catch(error => {
 				console.log(error);
 			})
