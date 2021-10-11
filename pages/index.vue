@@ -6,12 +6,12 @@
 			</h3>
 		</div>
 		<div class="flex flex-wrap gap-5 lg:m-0">
-			<Button primaryOutline width="w-none">Kryminał</Button>
-			<Button primaryOutline width="w-none">Thriller</Button>
-			<Button primaryOutline width="w-none">Popularnonaukowa</Button>
-			<Button primaryOutline width="w-none">Obyczajowa</Button>
-			<Button primaryOutline width="w-none">Kryminał</Button>
-			<Button primaryOutline width="w-none">Piękna</Button>
+			<Button primaryOutline width="w-none">Kryminał<NumberSpan margin="ml-2">120</NumberSpan></Button>
+			<Button primaryOutline width="w-none">Thriller<NumberSpan margin="ml-2">83</NumberSpan></Button>
+			<Button primaryOutline width="w-none">Popularnonaukowa<NumberSpan margin="ml-2">23</NumberSpan></Button>
+			<Button primaryOutline width="w-none">Obyczajowa<NumberSpan margin="ml-2">233</NumberSpan></Button>
+			<Button primaryOutline width="w-none">Edukacyjna<NumberSpan margin="ml-2">0</NumberSpan></Button>
+			<Button primaryOutline width="w-none">Piękna<NumberSpan margin="ml-2">34</NumberSpan></Button>
 		</div>
 		<div class="w-full bg-white">
 			<h3 class="text-2xl my-5 p-3">

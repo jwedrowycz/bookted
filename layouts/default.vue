@@ -19,7 +19,7 @@
 
 .dark-mode body {
     @apply bg-gray-900;
-    background-color: #4b4453;
+    background-color: #36333a;
 }
 
 .light-mode body{

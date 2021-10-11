@@ -20,7 +20,7 @@
         <div class="flex flex-col gap-3">
             <span class="text-gray-600 text-sm">Ostatnio zalogowany: 25 minut temu</span>
             <span class="text-gray-600">Płock, mazowieckie</span>
-            <span class="text-gray-600">Obserwujących <span class="px-2 py-1 bg-purple-600 text-white rounded-full">23</span></span>
+            <span class="text-gray-600">Obserwujących <NumberSpan margin="ml-2">23</NumberSpan></span>
             <span class="text-gray-600">Obserwuje <span class="px-2 py-1 bg-purple-600 text-white rounded-full">5</span></span>
         </div>
     </div>

@@ -40,7 +40,7 @@
             <div class="col-span-8 order-4 lg:order-none">
                 <div class=" bg-white p-5 lg:p-5 mb-5">
                     <h3 class="text-2xl">
-                        Inne przedmioty sprzedającego <div class="inline-block rounded-full bg-purple-600 px-2 text-white text-xl">5</div>
+                        Inne przedmioty sprzedającego <NumberSpan textSize="text-xl">5</NumberSpan> 
                     </h3>
                 </div>
                 <div class="bg-transparent lg:my-5">
