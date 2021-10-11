@@ -18,7 +18,7 @@
 				Ostatnio dodane
 			</h3>
 		</div>
-		<div class="flex flex-wrap gap-10 justify-between lg:m-0">
+		<div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-5 lg:m-0 ">
 			<Book v-for="book in books" :key="book.id" :book="book" />
 		</div>
     </div>
