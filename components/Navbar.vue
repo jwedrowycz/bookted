@@ -19,6 +19,9 @@
                             <li>
                                 <NuxtLink :to="{name: 'auth-register'}" class="ml-10 hover:text-gray-400 transition">Zarejestruj</NuxtLink>
                             </li>
+                            <li class="ml-10">
+                                <ColorMode />
+                            </li>
                         </ul>
                     </div>
                     <div class="flex justify-end align-center lg:hidden mr-2">
@@ -37,6 +40,9 @@
                         </li>
                         <li class="mb-5">
                             <a href="" class="">Link 2</a>
+                        </li>
+                        <li class="mb-5">
+                            <ColorMode />
                         </li>
                     </ul>
             </div>
@@ -73,7 +79,12 @@ export default {
 }
 
 .sticky {
-	@apply text-purple-800 py-1 bg-white border-b-2 border-purple-800;
+	@apply py-1;
+
+}
+
+.dark-mode .sticky {
+    @apply bg-purple-800 text-white
 }
 
 </style>
