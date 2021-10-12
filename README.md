@@ -4,11 +4,13 @@ Application based on popular selling platform like Vinted or OLX, but the main g
 To see backend project, see the [bookted-api](https://github.com/jwedrowycz/bookted-api).
 
 ## Table of Content
-- Build setup
-- Techonology stack and dependencies
-- General informations
-- TODO
-- License
+- [bookted](#bookted)
+  * [Table of Content](#table-of-content)
+  * [Build setup](#build-setup)
+  * [Technology and dependencies](#technology-and-dependencies)
+  * [General informations](#general-informations)
+  * [TODO](#todo)
+  * [License](#license)
 
 ## Build setup
 ```bash
@@ -48,5 +50,7 @@ At this moment, there are only several pages, like home page and single book vie
     - [ ] observed and bought auctions
 - [ ] connect front with backend
 - [ ] add dark mode
+
+
 ## License
 MIT
