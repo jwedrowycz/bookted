@@ -22,7 +22,7 @@
             <span class="text-gray-600">Płock, mazowieckie</span>
             <span class="text-gray-600">Obserwujących <NumberSpan>23</NumberSpan></span>
             <span class="text-gray-600">Obserwuje <NumberSpan>4</NumberSpan></span>
-            <div class="flex flex-col text-center mt-5">
+            <div class="flex flex-col text-center mt-5 mb-5">
                 <span class="text-gray-900 text-lg">Ocena użytkownika </span>
                 <div class="flex align-baseline justify-center mt-2">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="rgba(124, 58, 237)">

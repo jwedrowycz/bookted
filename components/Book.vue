@@ -29,7 +29,7 @@
             </div>
             <div class="flex items-center pb-3 font-semibold">
                 <img src="https://source.unsplash.com/random/100x100" alt="" class="rounded-full mr-2 h-8 w-8 object-cover">
-                Jane Doe
+                <NuxtLink :to="{ name: 'users-username', params: { 'username': 'janedoe' }}" class="hover:text-purple-600 transition-all">Jane Doe</NuxtLink>
             </div>
             <div class="flex mb-0 my-auto">
                 <p class="text-sm text-gray-500">
