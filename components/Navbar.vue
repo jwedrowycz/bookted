@@ -19,9 +19,9 @@
                             <li>
                                 <NuxtLink :to="{name: 'auth-register'}" class="ml-10 hover:text-gray-400 transition">Zarejestruj</NuxtLink>
                             </li>
-                            <li class="ml-10">
+                            <!-- <li class="ml-10">
                                 <ColorMode />
-                            </li>
+                            </li> -->
                         </ul>
                     </div>
                     <div class="flex justify-end align-center lg:hidden mr-2">
