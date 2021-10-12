@@ -10,7 +10,7 @@
             Użytkownik na <span class="font-semibold text-purple-600">bookted</span> od 02 paź 2021
         </div>
         <div class="flex justify-between gap-5  mb-5">
-            <Button primary>
+            <Button primary paddingX="px-2">
                 Spytaj o książkę
             </Button>
             <Button secondary>
