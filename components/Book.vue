@@ -31,10 +31,19 @@
                 <img src="https://source.unsplash.com/random/100x100" alt="" class="rounded-full mr-2 h-8 w-8 object-cover">
                 <NuxtLink :to="{ name: 'users-username', params: { 'username': 'janedoe' }}" class="hover:text-purple-600 transition-all">Jane Doe</NuxtLink>
             </div>
-            <div class="flex mb-0 my-auto">
-                <p class="text-sm text-gray-500">
-                    dzisiaj 20:23
-                </p>
+            <div class="flex justify-between mb-0 my-auto">
+                <div>
+                    <p class="text-sm text-gray-500">
+                        dzisiaj 20:23
+                    </p>
+                </div>
+                <div class="text-sm flex items-center text-gray-500">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" fill="none" viewBox="0 0 24 24" stroke="rgba(107, 114, 128)">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                    </svg>
+                    23
+                </div>
             </div>
         </div>
 </div>

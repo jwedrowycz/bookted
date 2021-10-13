@@ -1,6 +1,6 @@
 module.exports = {
     purge: [],
-    dark: 'media',
+    dark: 'false',
     theme: {
       fontFamily: {
         'nunito': ['nunito', 'sans-serif'],
