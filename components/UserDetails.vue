@@ -10,9 +10,9 @@
             Użytkownik na <span class="font-semibold text-purple-600">bookted</span> od 02 paź 2021
         </div>
         <div class="flex justify-between gap-5  mb-5">
-            <Button primary paddingX="px-2">
+            <ButtonLink :url="{ name: 'profile-conversations-id', params: { id: '1234' }}" primary paddingX="px-2">
                 Spytaj o książkę
-            </Button>
+            </ButtonLink>
             <Button secondary>
                 Obserwuj
             </Button>

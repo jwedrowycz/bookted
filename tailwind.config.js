@@ -12,7 +12,11 @@ module.exports = {
       extend: {},
     },
     variants: {
-      extend: {},
+      extend: {
+        backgroundColor: ['odd', 'even'],
+        textAlign: ['odd', 'even'],
+        order: ['odd', 'even'],
+      },
     },
     plugins: [
       require('@tailwindcss/forms'),

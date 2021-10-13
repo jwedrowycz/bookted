@@ -10,7 +10,7 @@
 		</div>
         <div class="flex w-full bg-white mb-5">
             <h3 class="text-2xl p-3"> 
-                Kryminał
+                Kryminał <NumberSpan>120</NumberSpan>
             </h3>
         </div>
         <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-5 lg:m-0 ">
