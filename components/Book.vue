@@ -1,17 +1,18 @@
 <template>
     <div class="flex flex-col lg:flex-row bg-white ">
         <div class="flex-none w-full lg:relative lg:w-48">
-            <img :src="book.book_image" alt="" class="lg:absolute inset-0 w-full h-full sm:h-96 lg:h-full object-cover" />
+            <img :src="auction.images" alt="" class="lg:absolute inset-0 w-full h-full sm:h-96 lg:h-full object-cover" />
+            <!-- {{ auction.images[0][filename] }} TODO: POPRAWIĆ TO DZIADOSTWO -->
         </div>
         <div class="flex-auto p-6 flex flex-col">
             <div class="flex flex-wrap">
             <h1 class="flex-auto text-xl font-semibold">
                 <NuxtLink :to="{ name: 'books-id', params: { 'id': 3 }}" class="hover:text-purple-800 transition-all">
-                    {{ book.title }}
+                    {{ auction.book.title }}
                 </NuxtLink>
             </h1>
             <div class="w-full flex-none text-sm font-medium text-gray-500 my-2">
-                 110 zł
+                 {{ auction.price }} zł
             </div>
             </div>
         
@@ -56,6 +57,6 @@ export default {
 
         }
     },
-    props: ['book']
+    props: ['auction']
 }
 </script>

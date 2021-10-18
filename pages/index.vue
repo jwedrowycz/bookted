@@ -18,18 +18,17 @@
 				</div>
 			</template>
 			<template v-else>
-				<Book v-for="book in books" :key="book.id" :book="book" />
+				<Book v-for="auction in auctions" :key="auction.id" :auction="auction" />
 			</template>
 		</div>
     </div>
 </template>
 
 <script>
-import axios from 'axios';
 export default {
 	data() {
 		return {
-			books: {},
+			auctions: {},
 			isLoading: false,
 		}
 	},
@@ -39,9 +38,9 @@ export default {
 	methods: {
 		loadData() {
 			this.isLoading = !this.isLoading;
-			axios.get('https://api.nytimes.com/svc/books/v3/lists/current/hardcover-fiction.json?api-key=sbXX8wsCr5lHgDZ0fGSfNx9IA9BTRvkk')
+			this.$axios.get('/auctions')
 			.then(response => {
-				this.books = response.data.results.books;
+				this.auctions = response.data.data;
 				this.isLoading = false;
 			}).catch(error => {
 				console.log(error);
