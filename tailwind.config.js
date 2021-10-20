@@ -7,7 +7,7 @@ module.exports = {
         'Comfortaa': ['"Comfortaa"', 'serif'] // Ensure fonts with spaces have " " surrounding it.
       },
       backgroundImage: {
-        'hero-img': "url('/hero.jpg')",
+        'hero-img': "url('/hero.webp')",
        },
       extend: {},
     },

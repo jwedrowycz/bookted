@@ -1,5 +1,4 @@
 <template>
-        <!-- <img class="object-cover opacity-50 h-96 w-full" src="/hero.jpg" alt=""> -->
     <div class="bg-hero-img bg-cover bg-opacity-50 h-96 w-full">
         <div class="grid grid-cols-6 justify-items-center items-center h-full">
             <div class="col-start-2 col-span-4">

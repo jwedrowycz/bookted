@@ -2,7 +2,7 @@
     <div class="flex flex-col lg:flex-row bg-white ">
         <div class="flex-none w-full lg:relative lg:w-48">
             <template v-if="auction.images[0]">
-                <img :src="auction.images[0]['filename']" alt="" class="lg:absolute inset-0 w-full h-full sm:h-96 lg:h-full object-cover" />
+                <img :src="auction.images[0]" alt="" class="lg:absolute inset-0 w-full h-96 sm:h-96 lg:h-full object-cover" />
             </template>
         </div>
         <div class="flex-auto p-6 flex flex-col">
