@@ -1,8 +1,9 @@
 <template>
     <div class="flex flex-col lg:flex-row bg-white ">
         <div class="flex-none w-full lg:relative lg:w-48">
-            <img :src="auction.images" alt="" class="lg:absolute inset-0 w-full h-full sm:h-96 lg:h-full object-cover" />
-            <!-- {{ auction.images[0][filename] }} TODO: POPRAWIĆ TO DZIADOSTWO -->
+            <template v-if="auction.images[0]">
+                <img :src="auction.images[0]['filename']" alt="" class="lg:absolute inset-0 w-full h-full sm:h-96 lg:h-full object-cover" />
+            </template>
         </div>
         <div class="flex-auto p-6 flex flex-col">
             <div class="flex flex-wrap">
