@@ -3,6 +3,8 @@ Application based on popular selling platform like Vinted or OLX, but the main g
 
 To see backend project, see the [bookted-api](https://github.com/jwedrowycz/bookted-api).
 
+![Screenshot](screenshot.png)
+
 ## Table of Content
 - [bookted](#bookted)
   * [Table of Content](#table-of-content)
