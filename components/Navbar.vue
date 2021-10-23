@@ -10,18 +10,25 @@
                 <div class="flex justify-end mt-1 col-span-2 lg:col-start-4 lg:col-span-4 ">
                     <div class="lg:flex hidden content-end">
                         <ul class="list-none lg:flex">
-                            <li>
-                                <button @click="showModal = true" class="ml-10 hover:text-gray-400 transition">Zaloguj</button>
-                                <modal v-if="showModal" @closeModal="showModal = false" >
-                                    <LoginForm @closeModal="showModal = false" />
-                                </modal>
-                            </li>
-                            <li>
-                                <NuxtLink :to="{name: 'auth-register'}" class="ml-10 hover:text-gray-400 transition">Zarejestruj</NuxtLink>
-                            </li>
-                            <!-- <li class="ml-10">
-                                <ColorMode />
-                            </li> -->
+                            <template v-if="!authenticated">
+                                <li>
+                                    <button @click="toggleModal" class="ml-10 hover:text-gray-400 transition">Zaloguj</button>
+                                    <modal :maxWidth="500" :adaptive="true" name="loginForm">
+                                        <AuthLoginForm />
+                                    </modal>
+                                </li>
+                                <li>
+                                    <NuxtLink :to="{name: 'auth-register'}" class="ml-10 hover:text-gray-400 transition">Zarejestruj</NuxtLink>
+                                </li>
+                            </template>
+                            <template v-else>
+                                <li>
+                                    <NuxtLink :to="{name: 'auth-register'}" class="ml-10 hover:text-gray-400 transition">{{ user.username }}</NuxtLink>
+                                </li>
+                                <li>
+                                    <a href="#" @click.prevent="handleLogout" class="ml-10 hover:text-gray-400 transition">Wyloguj</a>
+                                </li>
+                            </template>
                         </ul>
                     </div>
                     <div class="flex justify-end align-center lg:hidden mr-2">
@@ -52,23 +59,43 @@
 </template>
 
 <script>
+import { mapGetters, mapActions } from 'vuex';
+import Button from './Utility/Button.vue';
+
 export default {
+  components: { Button },
     data() {
         return {
             isHidden: true,
-            showModal: false,
         }
+    },
+    computed: {
+      ...mapGetters({
+        authenticated: 'auth/authenticated',
+        user: 'auth/user',
+      })
     },
 	mounted() {
 		window.addEventListener("scroll", function() {
 			var navbar = document.getElementById("navbar");
 			navbar.classList.toggle("sticky", window.scrollY > 0);
 		});
-	},
+	},  
     methods: {
+        ...mapActions({
+            signOut: 'auth/signOut'
+        }),
         toggleNavbar() {
             this.isHidden = !this.isHidden;
         },
+        async handleLogout() {
+            await this.signOut();
+            this.$router.replace({ name: 'index' })
+        },
+        toggleModal() {
+            this.$modal.show('loginForm')
+        }
+
     }
 }
 </script>

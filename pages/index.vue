@@ -14,11 +14,11 @@
 		<div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-5 lg:m-0 ">
 			<template v-if="isLoading">
 				<div class="col-span-3">
-					<Loading />
+					<UtilityLoading />
 				</div>
 			</template>
 			<template v-else>
-				<Book v-for="auction in auctions" :key="auction.id" :auction="auction" />
+				<AuctionBook v-for="auction in auctions" :key="auction.id" :auction="auction" />
 			</template>
 		</div>
     </div>

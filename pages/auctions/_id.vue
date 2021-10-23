@@ -2,13 +2,13 @@
     <div class="container mt-5 ">
         <template v-if="isLoading" class="bg-white">
 				<div class="col-span-3">
-					<Loading />
+					<UtilityLoading />
 				</div>
         </template>
         <template v-else>
             <div class="grid grid-cols-8 gap-5">
                 <div class="col-span-8 lg:col-start-1 lg:col-span-6 p-7 lg:p-10 bg-white  w-full h-full order-1 lg:order-none">
-                    <BookCarousel :images="auction.images" />
+                    <AuctionBookCarousel :images="auction.images" />
                 </div>
                 <div class="col-span-8 lg:col-start-7 lg:col-span-2 order-3 lg:order-none bg-white">
                 <UserDetails :user="auction.user" />
@@ -21,9 +21,9 @@
                             </h2>
                         </div>
                         <div>
-                            <Button primary>
+                            <UtilityButton primary>
                                 Kup książkę!
-                            </Button>
+                            </UtilityButton>
                         </div>
                     </div>
                     <div class="flex flex-col text-gray-600 text-sm mb-5 lg:mb-3">
@@ -44,7 +44,7 @@
                 <div class="col-span-8 order-4 lg:order-none">
                     <div class=" bg-white p-5 lg:p-5 mb-5">
                         <h3 class="text-2xl">
-                            Inne przedmioty sprzedającego <NumberSpan textSize="text-xl">5</NumberSpan> 
+                            Inne przedmioty sprzedającego <UtilityNumberSpan textSize="text-xl">5</UtilityNumberSpan> 
                         </h3>
                     </div>
                     <div class="bg-transparent lg:my-5">

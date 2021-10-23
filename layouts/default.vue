@@ -6,7 +6,7 @@
         </template>
         <main class="container mx-auto px-3 lg:px-0 flex-1 mb-20">
             <template v-if="$nuxt.$route.name != 'auth-register'">
-                <SearchInput />
+                <UtilitySearchInput />
 
             </template>
             <Nuxt />

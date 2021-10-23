@@ -10,18 +10,18 @@
             Użytkownik na <span class="font-semibold text-purple-600">bookted</span> od {{ user.created_at }}
         </div>
         <div class="flex justify-between gap-5  mb-5">
-            <ButtonLink :url="{ name: 'profile-conversations-id', params: { id: '1234' }}" primary paddingX="px-2">
+            <UtilityButtonLink :url="{ name: 'profile-conversations-id', params: { id: '1234' }}" primary paddingX="px-2">
                 Spytaj o książkę
-            </ButtonLink>
-            <Button secondary>
+            </UtilityButtonLink>
+            <UtilityButton secondary>
                 Obserwuj
-            </Button>
+            </UtilityButton>
         </div>
         <div class="flex flex-col gap-3">
             <span class="text-gray-600 text-sm">Ostatnio zalogowany: {{ user.last_login_at }}</span>
             <span class="text-gray-600">Płock, mazowieckie</span>
-            <span class="text-gray-600">Obserwujących <NumberSpan>23</NumberSpan></span>
-            <span class="text-gray-600">Obserwuje <NumberSpan>4</NumberSpan></span>
+            <span class="text-gray-600">Obserwujących <UtilityNumberSpan>23</UtilityNumberSpan></span>
+            <span class="text-gray-600">Obserwuje <UtilityNumberSpan>4</UtilityNumberSpan></span>
             <div class="flex flex-col text-center mt-5 mb-5">
                 <span class="text-gray-900 text-lg">Ocena użytkownika </span>
                 <div class="flex align-baseline justify-center mt-2">
@@ -34,7 +34,7 @@
             </div>
         </div>
          <div class="flex mb-0 my-auto">
-            <Button primary>Zobacz profil</Button>
+            <UtilityButton primary>Zobacz profil</UtilityButton>
         </div>
     </div>
 </template>
