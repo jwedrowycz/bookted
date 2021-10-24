@@ -59,29 +59,29 @@
 </template>
 
 <script>
+import {mapGetters, mapActions} from 'vuex';
+
 export default {
 	data() {
 		return {
-			auction: {},
             isLoading: false,
             auction_id: this.$route.params.id,
 		}
 	},
-    
-	beforeMount() {
-		this.loadData();
-	},
+    computed: {
+        ...mapGetters({
+            auction: 'auction/auction'
+        })
+
+    },
+    mounted() {
+        this.loadAuction(this.auction_id);
+    },
 	methods: {
-		loadData() {
-			this.isLoading = !this.isLoading;
-			this.$axios.get('/auctions/'+ this.auction_id)
-			.then(response => {
-				this.auction = response.data.data;
-				this.isLoading = false;
-			}).catch(error => {
-				console.log(error);
-			})
-		}
+        ...mapActions({
+            loadAuction: 'auction/loadAuction'
+        })
+       
 	}
 
 }

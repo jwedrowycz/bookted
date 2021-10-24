@@ -29,7 +29,7 @@
                 </svg>
             </button> -->
             </div>
-            <div class="flex items-center pb-3 font-semibold">
+            <div class="flex items-center pb-3 font-semibold break-all">
                 <img src="https://source.unsplash.com/random/100x100" alt="" class="rounded-full mr-2 h-8 w-8 object-cover">
                 <NuxtLink :to="{ name: 'users-username', params: { 'username': 'janedoe' }}" class="hover:text-purple-600 transition-all">{{ auction.user.username }}</NuxtLink>
             </div>

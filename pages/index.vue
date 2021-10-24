@@ -12,40 +12,39 @@
 			</h3>
 		</div>
 		<div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-5 lg:m-0 ">
-			<template v-if="isLoading">
+			<!-- <template v-if="isLoading">
 				<div class="col-span-3">
 					<UtilityLoading />
 				</div>
-			</template>
-			<template v-else>
-				<AuctionBook v-for="auction in auctions" :key="auction.id" :auction="auction" />
-			</template>
+			</template> -->
+			<!-- <template v-else> -->
+				<AuctionBook v-for="auction in recentAuctions.data" :key="auction.id" :auction="auction" />
+			<!-- </template> -->
 		</div>
     </div>
 </template>
 
 <script>
+import {mapActions, mapGetters} from 'vuex';
+
 export default {
 	data() {
 		return {
-			auctions: {},
-			isLoading: false,
+
 		}
 	},
-	mounted() {
-		this.loadData();
+	computed: {
+		...mapGetters({
+			recentAuctions: 'auction/recentAuctions'
+		})
+	},
+	beforeMounted() {
+		this.loadAuctions();
 	},
 	methods: {
-		loadData() {
-			this.isLoading = !this.isLoading;
-			this.$axios.get('/auctions')
-			.then(response => {
-				this.auctions = response.data.data;
-				this.isLoading = false;
-			}).catch(error => {
-				console.log(error);
-			})
-		}
+		...mapActions({
+			loadAuctions: 'auction/loadAuctions'
+		})
 	}
 
 }
