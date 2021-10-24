@@ -35,11 +35,13 @@ export default {
         },
         errors: [],
     }),
-     computed: {
+   
+    computed: {
       ...mapGetters({
             loadingStatus: 'auth/loadingStatus',
       })
     },
+    
     methods: {
         ...mapActions({
             signIn: 'auth/signIn'

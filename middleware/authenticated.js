@@ -1,5 +1,6 @@
 export default function({ redirect, store }) {
-    if (!store.state.auth.authenticated === false) {
+  console.log(store.state.auth.authenticated);
+    if (store.state.auth.authenticated) {
         redirect({name: 'index'})
     }
   }

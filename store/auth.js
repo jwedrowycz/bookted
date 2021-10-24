@@ -70,6 +70,7 @@ export const actions = {
                 commit('SET_AUTHENTICATED', true);
                 commit('SET_USER', response.data);
                 commit('SET_LOADING_STATUS', false);
+                redirect('/');
             })
             .catch(() => {
                 commit('SET_AUTHENTICATED', false);

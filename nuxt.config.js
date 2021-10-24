@@ -49,6 +49,15 @@ export default {
     baseURL: 'http://localhost:8000/api', // Used as fallback if no runtime config is provided
   },
  
+  // auth: {
+  //   strategies: {
+  //     'laravelSanctum': {
+  //       provider: 'laravel/sanctum',
+  //       url: 'localhost:8000'
+  //     },
+  //   }
+  // },
+
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
   },

@@ -5,10 +5,7 @@
             <Hero />
         </template>
         <main class="container mx-auto px-3 lg:px-0 flex-1 mb-20">
-            <template v-if="$nuxt.$route.name != 'auth-register'">
-                <UtilitySearchInput />
-
-            </template>
+            <UtilitySearchInput />
             <Nuxt />
         </main>
         <Footer />
@@ -27,3 +24,18 @@
 }
 
 </style>
+
+<script>
+export default {
+    data () {
+        return {
+            isLogin: this.$route.name == 'auth-login' ? true : false,
+            isRegister: this.$route.name == 'auth-register' ? true : false
+        }
+    },
+    beforeMounted() {
+    }
+
+    
+}
+</script>

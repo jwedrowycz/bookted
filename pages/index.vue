@@ -12,14 +12,14 @@
 			</h3>
 		</div>
 		<div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-5 lg:m-0 ">
-			<!-- <template v-if="isLoading">
+			<template v-if="loading">
 				<div class="col-span-3">
 					<UtilityLoading />
 				</div>
-			</template> -->
-			<!-- <template v-else> -->
+			</template>
+			<template v-else>
 				<AuctionBook v-for="auction in recentAuctions.data" :key="auction.id" :auction="auction" />
-			<!-- </template> -->
+			</template>
 		</div>
     </div>
 </template>
@@ -35,10 +35,12 @@ export default {
 	},
 	computed: {
 		...mapGetters({
-			recentAuctions: 'auction/recentAuctions'
+			recentAuctions: 'auction/recentAuctions',
+            loading: 'auction/loading'
+
 		})
 	},
-	beforeMounted() {
+	mounted() {
 		this.loadAuctions();
 	},
 	methods: {

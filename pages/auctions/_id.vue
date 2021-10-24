@@ -1,6 +1,6 @@
 <template>
     <div class="container mt-5 ">
-        <template v-if="isLoading" class="bg-white">
+        <template v-if="loading" class="bg-white">
 				<div class="col-span-3">
 					<UtilityLoading />
 				</div>
@@ -70,7 +70,8 @@ export default {
 	},
     computed: {
         ...mapGetters({
-            auction: 'auction/auction'
+            auction: 'auction/auction',
+            loading: 'auction/loading'
         })
 
     },
